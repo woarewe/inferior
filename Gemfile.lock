@@ -45,7 +45,7 @@ GEM
     unicode-display_width (2.2.0)
 
 PLATFORMS
-  arm64-darwin-21
+  ruby
 
 DEPENDENCIES
   rake (~> 13.0)
@@ -54,4 +54,4 @@ DEPENDENCIES
   runtime-interfaces!
 
 BUNDLED WITH
-   2.3.14
+   1.17.2
