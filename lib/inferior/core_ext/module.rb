@@ -6,6 +6,6 @@ class Module
   def interface!
     raise TypeError, "a class can not declared as an interface" if instance_of?(Class)
 
-    extend RuntimeInterfaces::Core::DSL::Interface
+    extend Inferior::Core::DSL::Interface
   end
 end

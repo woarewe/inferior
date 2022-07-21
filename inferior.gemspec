@@ -1,20 +1,19 @@
 # frozen_string_literal: true
 
-require_relative "lib/runtime_interfaces/version"
+require_relative "lib/inferior/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "runtime-interfaces"
-  spec.version = RuntimeInterfaces::VERSION
+  spec.name = "inferior"
+  spec.version = Inferior::VERSION
   spec.authors = ["woarewe"]
   spec.email = ["rostislav.zhuravsky@gmail.com"]
 
-  spec.summary = "Write a short summary, because RubyGems requires one."
-  spec.description = "Write a longer description or delete this line."
-  spec.homepage = "https://www.to.change/"
+  spec.summary = %Q(A library providing "interfaces" at the boot time)
+  spec.homepage = "https://github.com/woarewe/inferior"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
-  spec.metadata["allowed_push_host"] = "Set to your gem server 'https://example.com'"
+  spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage

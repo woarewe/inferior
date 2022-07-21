@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    runtime-interfaces (0.1.0)
+    inferior (0.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -48,10 +48,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  inferior!
   rake (~> 13.0)
   rspec (~> 3.11)
   rubocop (~> 1.31)
-  runtime-interfaces!
 
 BUNDLED WITH
-   1.17.2
+   2.3.18

@@ -2,7 +2,7 @@
 
 require_relative "../method"
 
-module RuntimeInterfaces
+module Inferior
   module Core
     module DSL
       module Interface

@@ -3,7 +3,7 @@
 require_relative '../error'
 require_relative 'parameter'
 
-module RuntimeInterfaces
+module Inferior
   module Core
     class Method
       private_class_method :new

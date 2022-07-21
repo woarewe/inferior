@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
-require "runtime-interfaces"
+require "inferior"
 
 module Printable
   interface!
@@ -32,3 +32,8 @@ end
 
 require "irb"
 IRB.start(__FILE__)
+
+
+# Class
+#   Interface
+#   Method #v ok/failed

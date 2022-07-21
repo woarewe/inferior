@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuntimeInterfaces
+module Inferior
   module Core
     module DSL
       module Class

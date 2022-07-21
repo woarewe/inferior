@@ -3,5 +3,5 @@
 require_relative "../core/dsl/class"
 
 class Class
-  include RuntimeInterfaces::Core::DSL::Class
+  include Inferior::Core::DSL::Class
 end

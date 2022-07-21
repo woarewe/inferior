@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module RuntimeInterfaces
+module Inferior
   class Error < StandardError; end
 end
