@@ -77,9 +77,15 @@ module RuntimeInterfaces
         end
       end
 
+      attr_reader :name, :type
+
       def initialize(name:, type:)
         @name = name
         @type = type
+      end
+
+      def eql?(other)
+        name.eql?(other.name) && type.eql?(other.name)
       end
 
       def definition
@@ -97,13 +103,9 @@ module RuntimeInterfaces
         when KEYWORD_SPLAT
           ["**", name].compact.join
         when BLOCK
-          ["&", name == "&" ? nil : name].compact
+          ["&", name == "&" ? nil : name].compact.join
         end
       end
-
-      private
-
-      attr_reader :name, :type
     end
   end
 end

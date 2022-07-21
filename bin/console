@@ -4,12 +4,25 @@
 require "bundler/setup"
 require "runtime-interfaces"
 
+module Printable
+  interface!
 
-module M
-  class << self
-    alias original_included included
-  end
+  require_method :name
+  require_method :print, ->(a, b = 3, c:, d: 1, &block) { }
 end
+
+class User
+  implements Printable
+
+  def name
+  end
+
+  def print(&block)
+
+  end
+  verify_interfaces!
+end
+
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
 

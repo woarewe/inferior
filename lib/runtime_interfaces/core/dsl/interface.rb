@@ -24,6 +24,10 @@ module RuntimeInterfaces
           @required_methods ||= {}
         end
 
+        def verify!(klass)
+          required_methods.each { |_name, method| method.verify_class!(klass) }
+        end
+
         private
 
         def register_method!(method)

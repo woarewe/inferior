@@ -2,22 +2,22 @@
 
 module RuntimeInterfaces
   module Core
-      module DSL
-        module Class
-          def implements(interface)
-            interfaces.add(interface)
-          end
+    module DSL
+      module Class
+        def implements(interface)
+          interfaces.add(interface)
+        end
 
-          def verify_interfaces!
-            interfaces.each { interface.verify!() }
-          end
+        def verify_interfaces!
+          interfaces.each { |interface| interface.verify!(self) }
+        end
 
-          private
+        private
 
-          def interfaces
-            @interfaces ||= Set.new
-          end
+        def interfaces
+          @interfaces ||= Set.new
         end
       end
+    end
   end
 end

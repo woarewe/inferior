@@ -3,9 +3,9 @@
 require_relative '../core/dsl/interface'
 
 class Module
-  class << self
-    def interface
-      extend RuntimeInterfaces::Core::DSL::Interface
-    end
+  def interface!
+    raise TypeError, "a class can not declared as an interface" if instance_of?(Class)
+
+    extend RuntimeInterfaces::Core::DSL::Interface
   end
 end
